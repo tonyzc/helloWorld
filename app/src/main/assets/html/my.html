@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>fuzhicheng的H5</title>
+
+<body>
+<p> content</p>
+<!--通过JavaScriptInterface进行native对象方法映射-->
+<button type="button" id="button1" onclick="callAndroid()">点击调用Native方法</button>
+<!--通过JS的prompt方法通知native-->
+<p style="margin-top:20px"><button type="button" id="button2" onclick="callJSPrompt()">点击调用JS的prompt方法</button></body></p>
+</body>
+
+<script>
+   function callJSAlert(){
+      alert("JS调用了JS的callJS方法");
+   }
+
+   function callJSPrompt(){
+   prompt("JS 调用prompt方法","default")
+   }
+
+   function callAndroid(){
+   test.hello("js调用native方法")
+   }
+</script>
+
+</head>
+
+</html>
